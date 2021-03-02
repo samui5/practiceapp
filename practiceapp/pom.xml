@@ -80,7 +80,30 @@
 		</dependency>
 		
 	</dependencies>
-
+	
+		<profiles>
+		 <profile>
+			<id>local</id>
+			<activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+		        <activatedProperties>local</activatedProperties>
+		    </properties>
+		</profile>
+		
+		<profile>
+			<id>cf</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<properties>
+		        <activatedProperties>cf</activatedProperties>
+		    </properties>
+		    
+		</profile>
+	</profiles>
+	
 	<build>
 		<plugins>
 			<plugin>
